@@ -1,5 +1,0 @@
-output/
-*.exe
-*.o
-*.obj
-*.log
