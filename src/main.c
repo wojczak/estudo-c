@@ -94,3 +94,90 @@ int main()
     return 0;
 }
     */
+
+/* lendo string com fgets, e removendo o caractere de nova linha
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char nome[50];
+    printf("Digite seu nome:\n");
+
+    fgets(nome, 50, stdin); // Lê uma linha de entrada do usuário, incluindo espaços
+
+    nome[strcspn(nome, "\n")] = 0; // Remove o caractere de nova linha
+    // strcspn encontra o índice do primeiro caractere de nova linha e substitui por '\0' (null terminator)
+    printf("Seu nome e: %s\n", nome);
+
+    getchar();
+    getchar();
+
+    return 0;
+}
+
+*/
+
+/*Lendo nome e sobrenome, removendo enter \n, usando strcpy para copiar string
+strcat para concatenar string
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char nome[20];         // Vetor para o nome (20 caracteres)
+    char sobrenome[20];    // Vetor para o sobrenome (20 caracteres)
+    char nomecompleto[40]; // Vetor para o nome completo (20 + 1 + 19 = 40, sobra espaço)
+
+    printf("Digite seu nome:\n");
+    fgets(nome, 20, stdin);           // Lê até 49 caracteres + \0
+    nome[strcspn(nome, "\n")] = '\0'; // Remove ENTER
+
+    printf("Digite seu sobrenome:\n");
+    fgets(sobrenome, 20, stdin);
+    sobrenome[strcspn(sobrenome, "\n")] = '\0'; // Remove ENTER
+
+    strcpy(nomecompleto, nome);      // Copia nome para nomecompleto
+    strcat(nomecompleto, " ");       // Adiciona um espaço
+    strcat(nomecompleto, sobrenome); // Adiciona sobrenome ao final
+
+    printf("Nome Completo e: %s\n", nomecompleto);                   // Imprime nome completo
+    printf("Tamanho do nome completo: %zu\n", strlen(nomecompleto)); // Mostra tamanho
+
+    getchar(); // Pausa o programa (opcional, já que fgets consome ENTER)
+
+    return 0;
+}
+
+*/
+
+/*contar letras especificas em um array de string
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char texto[100];
+    int contador = 0;
+
+    printf("Digite uma frase: ");
+    fgets(texto, 100, stdin);
+    texto[strcspn(texto, "\n")] = '\0'; // remove o ENTER
+
+    // Laço para percorrer cada caractere da string
+    for (int i = 0; texto[i] != '\0'; i++) {
+        if (texto[i] == 'a' || texto[i] == 'A') {
+            contador++; // soma 1 se for 'a' ou 'A'
+        }
+    }
+
+    printf("A frase tem %d letras 'a' ou 'A'.\n", contador);
+
+    return 0;
+}
+*/
+
+#include <stdio.h>
