@@ -1,5 +1,5 @@
-#ifndef CAPNOME_H
-#define CAPNOME_H
+#ifndef UTILS_H
+#define UTILS_H
 
 void adicionarnome(char nomes[][50], int *contador);
 void listarnome(char nomes[][50], int contador);

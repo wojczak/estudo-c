@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "capnome.h"
+#include "utils.h"
 #include <stdlib.h>
 
 void adicionarnome(char nomes[][50], int *contador)

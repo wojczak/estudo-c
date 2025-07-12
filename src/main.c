@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "capnome.h"
+#include "utils.h"
 
 int main()
 {
